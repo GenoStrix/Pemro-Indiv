@@ -3,213 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog_Page</title>
-
+    <title>Genos.Pro - Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
-  <body style="margin: 0px; font-family: &quot;Lato&quot;, sans-serif">
-    <nav
-      style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #808080;
-        padding: 15px 0;
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        opacity: 0.95;
-      "
-    >
-      <div style="margin-left: 50px">
-        <a
-          href="index.html"
-          align="left"
-          style="
-            color: #ea9b25;
-            opacity: 2;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 32px;
-          "
-          ><b style="font-family: &quot;Bebas Neue&quot;, sans-serif"
-            >Genos.Pro</b
-          ></a
-        >
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="index.html" class="navbar-logo">Genos.Pro</a>
       </div>
-
-      <div style="flex: 1; display: flex; justify-content: center">
-        <a
-          href="index.html"
-          style="
-            color: rgb(234, 155, 37);
-            opacity: 2;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 900;
-          "
-          ><b>Home</b></a
-        >
-        <a
-          href="gallery.html"
-          style="
-            color: rgb(234, 155, 37);
-            opacity: 2;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 900;
-          "
-          ><b>Gallery</b></a
-        >
-        <a
-          href="blog.html"
-          style="
-            color: rgb(234, 155, 37);
-            opacity: 2;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 900;
-          "
-          ><b>Blog</b></a
-        >
-        <a
-          href="contact.html"
-          style="
-            color: #ea9b25;
-            opacity: 2;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 900;
-          "
-          ><b>Contact</b></a
-        >
+      <div class="navbar-links">
+        <a href="index.html"><b>Home</b></a>
+        <a href="gallery.html"><b>Gallery</b></a>
+        <a href="blog.html"><b>Blog</b></a>
+        <a href="contact.html"><b>Contact</b></a>
       </div>
-
-      <div style="flex: 0.146; padding-right: 30px">&nbsp;</div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+      <div class="navbar-spacer">&nbsp;</div>
     </nav>
-    <div
-      style="
-        background: linear-gradient(to bottom, #000000, #1a1a1a, #000000);
-        padding: 150px 0;
-        min-height: 100vh;
-      "
-    >
-      <div align="center">
-        <h1
-          style="
-            color: #ea9b25;
-            font-family: &quot;Bebas Neue&quot;, sans-serif;
-            font-size: 60px;
-            letter-spacing: 3px;
-            margin-bottom: 50px;
-          "
-        >
-          LATEST BLOGS
-        </h1>
 
-        <div
-          style="
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-          "
-        >
-          <div
-            style="
-              background: #222;
-              width: 300px;
-              border-radius: 20px;
-              overflow: hidden;
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-              border: 1px solid #333;
-            "
-          >
-            <img
-              src="pengaruh AI anak muda.jpg"
-              style="width: 100%; height: 200px; object-fit: cover"
-              alt="Pengaruh AI"
-            />
-            <div style="padding: 20px; text-align: left">
-              <h3 style="color: #ea9b25; margin: 0 0 10px 0">
-                Pengaruh AI pada Anak Muda
-              </h3>
-              <p style="color: #ccc; font-size: 14px; line-height: 1.5">
-                Artikel ini membahas bagaimana kecerdasan buatan (AI)
-                memengaruhi kehidupan anak muda, mulai dari pendidikan hingga
-                hiburan.
-              </p>
-            </div>
+    <!-- BLOG SECTION -->
+    <section class="blog-section">
+      <h1>LATEST BLOGS</h1>
+
+      <div class="blog-grid">
+        <div class="blog-card">
+          <img src="pengaruh AI anak muda.jpg" alt="Pengaruh AI" />
+          <div class="blog-card-body">
+            <h3>Pengaruh AI pada Anak Muda</h3>
+            <p>
+              Artikel ini membahas bagaimana kecerdasan buatan (AI) memengaruhi
+              kehidupan anak muda, mulai dari pendidikan hingga hiburan.
+            </p>
           </div>
+        </div>
 
-          <div
-            style="
-              background: #222;
-              width: 300px;
-              border-radius: 20px;
-              overflow: hidden;
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-              border: 1px solid #333;
-            "
-          >
-            <img
-              src="pengaruh game.jpg"
-              style="width: 100%; height: 200px; object-fit: cover"
-              alt="Pengaruh Game"
-            />
-            <div style="padding: 20px; text-align: left">
-              <h3 style="color: #ea9b25; margin: 0 0 10px 0">
-                Manajemen Waktu & Game
-              </h3>
-              <p style="color: #ccc; font-size: 14px; line-height: 1.5">
-                Artikel ini membahas bagaimana permainan video memengaruhi
-                pengelolaan waktu anak muda dalam keseharian.
-              </p>
-            </div>
+        <div class="blog-card">
+          <img src="pengaruh game.jpg" alt="Pengaruh Game" />
+          <div class="blog-card-body">
+            <h3>Manajemen Waktu &amp; Game</h3>
+            <p>
+              Artikel ini membahas bagaimana permainan video memengaruhi
+              pengelolaan waktu anak muda dalam keseharian.
+            </p>
           </div>
+        </div>
 
-          <div
-            style="
-              background: #222;
-              width: 300px;
-              border-radius: 20px;
-              overflow: hidden;
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-              border: 1px solid #333;
-            "
-          >
-            <img
-              src="pengaruh chat GPT.jpg"
-              style="width: 100%; height: 200px; object-fit: cover"
-              alt="Pengaruh ChatGPT"
-            />
-            <div style="padding: 20px; text-align: left">
-              <h3 style="color: #ea9b25; margin: 0 0 10px 0">
-                ChatGPT di Kalangan Remaja
-              </h3>
-              <p style="color: #ccc; font-size: 14px; line-height: 1.5">
-                Eksplorasi mendalam tentang peran ChatGPT dalam membantu tugas
-                sekolah dan kreativitas generasi muda saat ini.
-              </p>
-            </div>
+        <div class="blog-card">
+          <img src="pengaruh chat GPT.jpg" alt="Pengaruh ChatGPT" />
+          <div class="blog-card-body">
+            <h3>ChatGPT di Kalangan Remaja</h3>
+            <p>
+              Eksplorasi mendalam tentang peran ChatGPT dalam membantu tugas
+              sekolah dan kreativitas generasi muda saat ini.
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <script src="script.js"></script>
   </body>
 </html>

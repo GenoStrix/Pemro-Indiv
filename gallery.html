@@ -1,294 +1,190 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pemro_tugas_project_1</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet"
-  />
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genos.Pro - Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .gallery-section {
+        background: linear-gradient(to bottom, #ffffff, #000000);
+        padding: 100px 40px 80px;
+        min-height: 100vh;
+      }
 
-<body style="margin: 0px; margin-top: 70px">
-  <nav
-    style="
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #808080;
-      padding: 15px 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      opacity: 0.95;
-    "
-  >
-    <div style="margin-left: 50px">
-      <a
-        href="index.html"
-        align="left"
-        style="
-          color: #ea9b25;
-          opacity: 2;
-          margin: 0 15px;
-          text-decoration: none;
-          font-size: 32px;
-        "
-        ><b style="font-family: Bebas Neue">Genos.Pro</b></a
-      >
-    </div>
+      .gallery-section-title {
+        text-align: center;
+        color: rgb(149, 93, 2);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 56px;
+        letter-spacing: 3px;
+        margin: 0 0 60px 0;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
 
-    <div style="flex: 1; display: flex; justify-content: center">
-      <a
-        href="index.html"
-        style="
-          color: rgb(234, 155, 37);
-          opacity: 2;
-          margin: 0 15px;
-          text-decoration: none;
-          font-family: Lato;
-          font-weight: 900;
-        "
-        ><b>Home</b></a
-      >
-      <a
-        href="gallery.html"
-        style="
-          color: rgb(234, 155, 37);
-          opacity: 2;
-          margin: 0 15px;
-          text-decoration: none;
-          font-family: Lato;
-          font-weight: 900;
-        "
-        ><b>Gallery</b></a
-      >
-      <a
-        href="blog.html"
-        style="
-          color: rgb(234, 155, 37);
-          opacity: 2;
-          margin: 0 15px;
-          text-decoration: none;
-          font-family: Lato;
-          font-weight: 900;
-        "
-        ><b>Blog</b></a
-      >
-      <a
-        href="contact.html"
-        style="
-          color: #ea9b25;
-          opacity: 2;
-          margin: 0 15px;
-          text-decoration: none;
-          font-family: Lato;
-          font-weight: 900;
-        "
-        ><b>Contact</b></a
-      >
-    </div>
+      .gallery-row {
+        display: flex;
+        align-items: center;
+        max-width: 860px;
+        margin: 0 auto 50px;
+      }
 
-    <div style="flex: 0.146; padding-right: 30px">&nbsp;</div>
-  </nav>
+      .gallery-photo-wrap {
+        flex-shrink: 0;
+      }
 
-  <div
-    style="
-      background: linear-gradient(to bottom, #ffffff, #000000);
-      padding: 270px 0;
-    "
-    align="center"
-  >
-    <div class="gallery-container" align="left" style="margin-left: 300px">
-      <h1
-        style="
-          position: relative;
-          z-index: 3;
-          color: rgb(149, 93, 2);
-          margin-bottom: -20px;
-          font-family: Bebas Neue;
-          font-size: 56px;
-          left: 280px;
-          bottom: 200px;
-          top: -185px;
-          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        "
-      >
-        Ade Rai
-      </h1>
+      .gallery-photo {
+        width: 240px;
+        height: 290px;
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: top;
+        border: 3px solid #955d02;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+        display: block;
+        position: relative;
+        z-index: 2;
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+      }
 
-      <div
-        style="
-          position: absolute;
-          left: 460px;
-          top: 170px;
-          width: 500px;
-          height: 300px;
-          bottom: 250px;
-          padding: 30px 30px 30px 80px;
-          background-color: rgba(255, 255, 255, 0.9);
-          border-radius: 20px;
-          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-          z-index: 1;
-        "
-      >
-        <h3 style="color: #daa44e; margin-top: 50; margin-left: 40px">
-          Detail Informasi
-        </h3>
-        <p
-          style="
-            color: #333;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-left: 40px;
-          "
-        >
-          Ade Rai adalah pakar kebugaran Indonesia. Foto ini menunjukkan
-          dedikasinya dalam menjaga kesehatan fisik yang menginspirasi banyak
-          orang.
-        </p>
+      .gallery-photo:hover {
+        transform: scale(1.05) rotate(-1deg);
+        box-shadow: 0 22px 55px rgba(149, 93, 2, 0.5);
+      }
+
+      .gallery-info {
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 20px;
+        padding: 32px 36px 32px 70px;
+        margin-left: -50px;
+        flex: 1;
+        box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.15);
+        z-index: 1;
+      }
+
+      .gallery-info h1 {
+        color: rgb(149, 93, 2);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 46px;
+        margin: 0 0 4px 0;
+        line-height: 1.1;
+      }
+
+      .gallery-info h3 {
+        color: #daa44e;
+        margin: 0 0 12px 0;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .gallery-info p {
+        color: #444;
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      @media (max-width: 680px) {
+        .gallery-row {
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 40px;
+        }
+        .gallery-info {
+          margin-left: 0;
+          margin-top: -30px;
+          padding: 40px 24px 24px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="index.html" class="navbar-logo">Genos.Pro</a>
+      </div>
+      <div class="navbar-links">
+        <a href="index.html"><b>Home</b></a>
+        <a href="gallery.html"><b>Gallery</b></a>
+        <a href="blog.html"><b>Blog</b></a>
+        <a href="contact.html"><b>Contact</b></a>
+      </div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+      <div class="navbar-spacer">&nbsp;</div>
+    </nav>
+
+    <section class="gallery-section">
+      <h1 class="gallery-section-title">GALLERY</h1>
+
+      <!-- Ade Rai -->
+      <div class="gallery-row">
+        <div class="gallery-photo-wrap">
+          <img class="gallery-photo" src="ade rai.jpeg" alt="Ade Rai" />
+        </div>
+        <div class="gallery-info">
+          <h1>Ade Rai</h1>
+          <h3>Detail Informasi</h3>
+          <p>
+            Ade Rai adalah pakar kebugaran Indonesia. Foto ini menunjukkan
+            dedikasinya dalam menjaga kesehatan fisik yang menginspirasi banyak
+            orang.
+          </p>
+        </div>
       </div>
 
-      <img
-        src="ade rai.jpeg"
-        width="260"
-        height="300"
-        style="
-          position: absolute;
-          left: 300;
-          top: 200;
-          border-radius: 20px;
-          z-index: 2;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-          border: 2px solid #955d02;
-        "
-        alt="Project 1"
-      />
-    </div>
-
-    <div
-      style="position: relative; width: 1000px; height: 400px; text-align: left"
-    >
-      <img
-        src="najwa shihab.jpg"
-        width="260"
-        height="300"
-        style="
-          position: absolute;
-          left: 50px;
-          top: 200px;
-          border-radius: 20px;
-          z-index: 2;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-          border: 2px solid #955d02;
-        "
-        alt="Project 2"
-      />
-
-      <div
-        style="
-          position: absolute;
-          left: 200px;
-          top: 175px;
-          width: 450px;
-          height: 300px;
-          padding: 30px 30px 30px 130px;
-          background-color: rgba(255, 255, 255, 0.9);
-          border-radius: 20px;
-          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-          z-index: 1;
-        "
-      >
-        <h3 style="color: #daa44e; margin-top: 49">Detail Informasi</h3>
-        <p style="color: #333; font-size: 14px; line-height: 1.6">
-          Najwa Shihab adalah seorang jurnalis, tokoh publik, dan aktivis
-          Indonesia yang dikenal melalui program "Mata Najwa" dan dedikasinya
-          terhadap literasi bangsa.
-        </p>
+      <!-- Najwa Shihab -->
+      <div class="gallery-row">
+        <div class="gallery-photo-wrap">
+          <img
+            class="gallery-photo"
+            src="najwa shihab.jpg"
+            alt="Najwa Shihab"
+          />
+        </div>
+        <div class="gallery-info">
+          <h1>Najwa Shihab</h1>
+          <h3>Detail Informasi</h3>
+          <p>
+            Najwa Shihab adalah seorang jurnalis, tokoh publik, dan aktivis
+            Indonesia yang dikenal melalui program "Mata Najwa" dan dedikasinya
+            terhadap literasi bangsa.
+          </p>
+        </div>
       </div>
 
-      <h1
-        style="
-          position: absolute;
-          left: 330px;
-          top: 200px;
-          z-index: 3;
-          color: rgb(149, 93, 2);
-          font-family: &quot;Bebas Neue&quot;, Arial, sans-serif;
-          font-size: 56px;
-          margin: 0;
-          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        "
-      >
-        Najwa Shihab
-      </h1>
-    </div>
-
-    <div
-      style="position: relative; width: 1000px; height: 400px; text-align: left"
-    >
-      <img
-        src="WIndah batubara.png"
-        width="260"
-        height="300"
-        style="
-          position: absolute;
-          left: 50px;
-          top: 240px;
-          border-radius: 20px;
-          z-index: 2;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-          border: 2px solid #955d02;
-        "
-        alt="Project 3"
-      />
-
-      <div
-        style="
-          position: absolute;
-          left: 200px;
-          top: 215px;
-          width: 450px;
-          height: 300px;
-          padding: 30px 30px 30px 130px;
-          background-color: rgba(255, 255, 255, 0.9);
-          border-radius: 20px;
-          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-          z-index: 1;
-        "
-      >
-        <h3 style="color: #daa44e; margin-top: 49px">Detail Informasi</h3>
-        <p style="color: #333; font-size: 14px; line-height: 1.6">
-          Windah Basudara adalah konten kreator dan streamer gaming Indonesia
-          yang dikenal dengan julukan "Bapak Bocil Kematian" karena cara
-          menghiburnya yang unik dan ekspresif.
-        </p>
+      <!-- Windah Basudara -->
+      <div class="gallery-row">
+        <div class="gallery-photo-wrap">
+          <img
+            class="gallery-photo"
+            src="WIndah batubara.png"
+            alt="Windah Basudara"
+          />
+        </div>
+        <div class="gallery-info">
+          <h1>Windah Basudara</h1>
+          <h3>Detail Informasi</h3>
+          <p>
+            Windah Basudara adalah konten kreator dan streamer gaming Indonesia
+            yang dikenal dengan julukan "Bapak Bocil Kematian" karena cara
+            menghiburnya yang unik dan ekspresif.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <h1
-        style="
-          position: absolute;
-          left: 330px;
-          top: 230px;
-          z-index: 3;
-          color: rgb(149, 93, 2);
-          font-family: &quot;Bebas Neue&quot;, Arial, sans-serif;
-          font-size: 56px;
-          margin: 0;
-          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        "
-      >
-        Windah Basudara
-      </h1>
-    </div>
-  </div>
-</body>
+    <script src="main.js"></script>
+  </body>
+</html>
