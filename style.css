@@ -1,0 +1,391 @@
+/* ================= GLOBAL STYLES ================= */
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #000000);
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+b {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ================= NAVIGATION BAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.95);
+  padding: 15px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition:
+    background-color 0.3s ease,
+    padding 0.3s ease;
+}
+
+/* Efek saat discroll (diatur via JavaScript) */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-brand {
+  margin-left: 50px;
+  color: #ea9b25;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: #ea9b25;
+  margin: 0 15px;
+  font-weight: 900;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.nav-spacer {
+  flex: 0.146;
+  padding-right: 30px;
+}
+
+/* ================= HOME PAGE ================= */
+.hero-section {
+  padding: 180px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  width: 90%;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-text h1 {
+  color: #955d02;
+  font-size: 48px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-text p {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid #955d02;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* ================= GALLERY PAGE ================= */
+.gallery-section {
+  padding: 150px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.gallery-card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.gallery-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Membalik posisi untuk layout zig-zag */
+.gallery-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.gallery-img {
+  width: 260px;
+  height: 300px;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid #955d02;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+.gallery-info {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px 40px 40px 100px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-left: -80px; /* Membuat efek tumpang tindih */
+  flex: 1;
+  position: relative;
+}
+
+.gallery-card.reverse .gallery-info {
+  padding: 40px 100px 40px 40px;
+  margin-left: 0;
+  margin-right: -80px;
+}
+
+.gallery-info h3 {
+  color: #daa44e;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+.gallery-info p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gallery-title {
+  position: absolute;
+  top: -40px;
+  left: 180px;
+  color: #955d02;
+  font-size: 56px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  margin: 0;
+}
+
+.gallery-card.reverse .gallery-title {
+  left: auto;
+  right: 180px;
+}
+
+/* ================= BLOG PAGE ================= */
+.blog-page-bg {
+  background: linear-gradient(to bottom, #000000, #1a1a1a, #000000);
+}
+
+.blog-section {
+  padding: 150px 0;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.blog-title {
+  color: #ea9b25;
+  font-size: 60px;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+}
+
+.blog-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.blog-card {
+  background: #222;
+  width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(234, 155, 37, 0.3);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.blog-card:hover img {
+  opacity: 0.8;
+}
+
+.blog-card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.blog-card-content h3 {
+  color: #ea9b25;
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+.blog-card-content p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+}
+
+/* ================= CONTACT PAGE ================= */
+.contact-section {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.contact-title {
+  color: #955d02;
+  font-size: 56px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.contact-links {
+  margin-bottom: 40px;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: black;
+  margin: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #955d02;
+  transform: scale(1.05);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.contact-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #ea9b25;
+  outline: none;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: #955d02;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s ease;
+}
+
+.btn-submit:hover {
+  background-color: #ea9b25;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
