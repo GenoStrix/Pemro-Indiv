@@ -55,12 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Observe elements with animation classes
   // Note: gallery-item is excluded — gallery uses plain visible CSS, no fade-in
-  document
-    .querySelectorAll(".home-text, .home-image, .blog-card")
-    .forEach((el, i) => {
-      el.dataset.delay = i * 120;
-      observer.observe(el);
-    });
+  document.querySelectorAll(".blog-card").forEach((el, i) => {
+    el.dataset.delay = i * 120;
+    observer.observe(el);
+  });
 
   // ── Toast helper ──────────────────────────────────────
   window.showToast = (msg) => {
