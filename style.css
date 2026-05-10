@@ -1,13 +1,3 @@
-/* ===========================
-   GLOBAL STYLES - Genos.Pro
-   =========================== */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -17,9 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===========================
-   NAVBAR
-   =========================== */
+/* NAVBAR */
 
 .navbar {
   position: fixed;
@@ -155,9 +143,7 @@ html {
   }
 }
 
-/* ===========================
-   SCROLL TO TOP
-   =========================== */
+/* SCROLL TO TOP */
 
 #scrollTopBtn {
   position: fixed;
@@ -189,9 +175,7 @@ html {
   transform: scale(1.1);
 }
 
-/* ===========================
-   PAGE: HOME (index.html)
-   =========================== */
+/* PAGE: HOME (index.html) */
 
 .home-section {
   padding: 180px 0 100px;
@@ -250,10 +234,7 @@ html {
     transform 0.8s ease 0.2s;
 }
 
-/* ===========================
-   PAGE: BLOG (blog.html)
-   =========================== */
-/* Background & wave diatur di blog.html langsung */
+/* BLOG */
 
 .blog-section {
   position: relative;
@@ -288,7 +269,6 @@ html {
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
-  /* Warna & border diatur di blog.html */
   transition:
     transform 0.4s ease,
     box-shadow 0.4s ease,
@@ -331,10 +311,7 @@ html {
   margin: 0;
 }
 
-/* ===========================
-   PAGE: GALLERY (gallery.html)
-   =========================== */
-/* Background & wave diatur di gallery.html langsung */
+/* PAGE: GALLERY (gallery.html) */
 
 .gallery-section {
   position: relative;
@@ -397,7 +374,6 @@ html {
   margin-left: -45px;
   flex: 1;
   z-index: 1;
-  /* Warna bg diatur di gallery.html */
 }
 
 .gallery-info h1 {
@@ -442,9 +418,7 @@ html {
   }
 }
 
-/* ===========================
-   PAGE: CONTACT (contact.html)
-   =========================== */
+/* PAGE: CONTACT (contact.html) */
 
 .contact-section {
   background: linear-gradient(to bottom, #ffffff, #000000);
@@ -567,9 +541,7 @@ html {
   transform: translateY(0);
 }
 
-/* ===========================
-   TOAST
-   =========================== */
+/* TOAST */
 
 .toast {
   position: fixed;
